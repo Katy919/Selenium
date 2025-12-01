@@ -39,7 +39,7 @@ public class CallBackPositiveTest {
 
     @Test
     void shouldSubmitValidReqFullNameWithSpaces() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] ")).sendKeys("Екатерина Голубева");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Екатерина Голубева");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79811234567");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button")).click();
