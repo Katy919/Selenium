@@ -99,7 +99,7 @@ public class CallBackNegativeTest {
 
     @Test
     void shouldSubmitNegativeReqWhenPhoneWithoutPlus() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] ")).sendKeys("Екатерина Голубева");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Екатерина Голубева");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("89117115611");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button")).click();
@@ -109,7 +109,7 @@ public class CallBackNegativeTest {
 
     @Test
     void shouldSubmitNegativeReqWhenPhoneWithBracketsAndDashes() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] ")).sendKeys("Екатерина Голубева");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Екатерина Голубева");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+7(911)711-56-11");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button")).click();
@@ -119,7 +119,7 @@ public class CallBackNegativeTest {
 
     @Test
     void shouldSubmitNegativeReqWhenPhoneContainsSpecialCharacters() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] ")).sendKeys("Екатерина Голубева");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Екатерина Голубева");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("%#$#$#%#%%");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button")).click();
@@ -129,7 +129,7 @@ public class CallBackNegativeTest {
 
     @Test
     void shouldSubmitNegativeReqWhenPhoneLessTwelveCharacters() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] ")).sendKeys("Екатерина Голубева");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Екатерина Голубева");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+7911");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button")).click();
@@ -139,7 +139,7 @@ public class CallBackNegativeTest {
 
     @Test
     void shouldSubmitNegativeReqWhenAgreementNotClicked() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] ")).sendKeys("Екатерина Голубева");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Екатерина Голубева");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79117115611");
         driver.findElement(By.cssSelector("[data-test-id='agreement']"));
         driver.findElement(By.cssSelector("button")).click();
